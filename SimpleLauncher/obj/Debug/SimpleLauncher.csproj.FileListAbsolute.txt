@@ -9,3 +9,14 @@ C:\Users\amilr\source\repos\SimpleLauncher\SimpleLauncher\bin\Debug\SimpleLaunch
 C:\Users\amilr\source\repos\SimpleLauncher\SimpleLauncher\obj\Debug\SimpleLauncher.exe
 C:\Users\amilr\source\repos\SimpleLauncher\SimpleLauncher\obj\Debug\SimpleLauncher.pdb
 C:\Users\amilr\source\repos\SimpleLauncher\SimpleLauncher\bin\Debug\config.xml
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\bin\Debug\config.xml
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\bin\Debug\SimpleLauncher.exe.config
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\bin\Debug\SimpleLauncher.exe
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\bin\Debug\SimpleLauncher.pdb
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\obj\Debug\SimpleLauncher.csprojResolveAssemblyReference.cache
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\obj\Debug\SimpleLauncher.MainForm.resources
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\obj\Debug\SimpleLauncher.Properties.Resources.resources
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\obj\Debug\SimpleLauncher.csproj.GenerateResource.Cache
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\obj\Debug\SimpleLauncher.csproj.CoreCompileInputs.cache
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\obj\Debug\SimpleLauncher.exe
+C:\Users\amilr\Projects\simplelauncher\SimpleLauncher\obj\Debug\SimpleLauncher.pdb

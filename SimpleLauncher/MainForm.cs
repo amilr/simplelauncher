@@ -14,7 +14,7 @@ namespace SimpleLauncher
 {
     public partial class MainForm : Form
     {
-        private List<KeyValuePair<string, string>> Commands = new List<KeyValuePair<string, string>>();
+        private List<KeyValuePair<string, CommandItem>> Commands = new List<KeyValuePair<string, CommandItem>>();
 
         public MainForm()
         {
@@ -29,8 +29,11 @@ namespace SimpleLauncher
             {
                 var label = item.Element("Label").Value;
                 var command = item.Element("Command").Value;
+                var arguments = item.Element("Arguments") == null  ? null : item.Element("Arguments").Value;
 
-                Commands.Add(new KeyValuePair<string, string>(label, command));
+                var ci = new CommandItem { Command = command, Arguments = arguments };
+
+                Commands.Add(new KeyValuePair<string, CommandItem>(label, ci));
             }
 
             foreach (var command in Commands)
@@ -44,9 +47,7 @@ namespace SimpleLauncher
             int index = lbItems.IndexFromPoint(e.Location);
             if (index != ListBox.NoMatches)
             {
-                var command = Commands[index].Value;
-
-                Process.Start(command);
+                RunCommand(index);
             }
         }
 
@@ -54,9 +55,28 @@ namespace SimpleLauncher
         {
             if (e.KeyCode == Keys.Enter)
             {
-                var command = Commands[lbItems.SelectedIndex].Value;
+                RunCommand(lbItems.SelectedIndex);
+            }
+        }
 
-                Process.Start(command);
+        private void RunCommand(int index)
+        {
+            var command = Commands[lbItems.SelectedIndex].Value;
+
+            try
+            {
+                if (command.Arguments == null)
+                {
+                    Process.Start(command.Command);
+                }
+                else
+                {
+                    Process.Start(command.Command, command.Arguments);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error");
             }
         }
     }

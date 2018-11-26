@@ -12,4 +12,9 @@
     <Label>Google</Label>
     <Command>http://www.google.com</Command>
   </Item>
+  <Item>
+    <Label>Launcher Config</Label>
+    <Command>c:\windows\notepad.exe</Command>
+    <Arguments>.\config.xml</Arguments>
+  </Item>
 </Items>
