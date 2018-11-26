@@ -25,6 +25,8 @@ namespace SimpleLauncher
         {
             var xdoc = XDocument.Load("config.xml");
 
+            Text = xdoc.Document.Root.Attribute("Title").Value;
+
             foreach (var item in xdoc.Document.Root.Elements("Item"))
             {
                 var label = item.Element("Label").Value;

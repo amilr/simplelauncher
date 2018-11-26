@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
-<Items>
+<Config Title="My Launcher">
   <Item>
     <Label>Notepad</Label>
     <Command>c:\windows\notepad.exe</Command>
@@ -17,4 +17,4 @@
     <Command>c:\windows\notepad.exe</Command>
     <Arguments>.\config.xml</Arguments>
   </Item>
-</Items>
+</Config>
