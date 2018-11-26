@@ -13,6 +13,10 @@
     <Command>http://www.google.com</Command>
   </Item>
   <Item>
+    <Label>Github</Label>
+    <Command>http://github.com</Command>
+  </Item>
+  <Item>
     <Label>Launcher Config</Label>
     <Command>c:\windows\notepad.exe</Command>
     <Arguments>.\config.xml</Arguments>

@@ -23,6 +23,11 @@ namespace SimpleLauncher
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            LoadConfig();
+        }
+
+        private void LoadConfig()
+        {
             var xdoc = XDocument.Load("config.xml");
 
             Text = xdoc.Document.Root.Attribute("Title").Value;
@@ -31,7 +36,7 @@ namespace SimpleLauncher
             {
                 var label = item.Element("Label").Value;
                 var command = item.Element("Command").Value;
-                var arguments = item.Element("Arguments") == null  ? null : item.Element("Arguments").Value;
+                var arguments = item.Element("Arguments") == null ? null : item.Element("Arguments").Value;
 
                 var ci = new CommandItem { Command = command, Arguments = arguments };
 
@@ -42,6 +47,14 @@ namespace SimpleLauncher
             {
                 lbItems.Items.Add(command.Key);
             }
+        }
+
+        private void ReloadConfig()
+        {
+            Commands.Clear();
+            lbItems.Items.Clear();
+
+            LoadConfig();
         }
 
         private void lbItems_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -58,6 +71,10 @@ namespace SimpleLauncher
             if (e.KeyCode == Keys.Enter)
             {
                 RunCommand(lbItems.SelectedIndex);
+            }
+            else if (e.KeyCode == Keys.F5)
+            {
+                ReloadConfig();
             }
         }
 
