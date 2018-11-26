@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Items>
+  <Item>
+    <Label>Notepad</Label>
+    <Command>c:\windows\notepad.exe</Command>
+  </Item>
+  <Item>
+    <Label>Notepad Again</Label>
+    <Command>c:\windows\notepad.exe</Command>
+  </Item>
+  <Item>
+    <Label>Google</Label>
+    <Command>http://www.google.com</Command>
+  </Item>
+</Items>
